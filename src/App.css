@@ -1,12 +1,14 @@
 .App {
   text-align: center;
+  padding: 30px;
+  height: 100vh;
 }
 
 .navbar{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgb(38, 161, 114);
+  background: #40798C;
   color: white;
   min-height: 50px;
   padding: 1em;
@@ -21,6 +23,23 @@
 }
 .todo-form {
   margin: .3em;
+}
+.todo {
+  background: #70A9A1;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  padding: 3px 12px;
+  font-size: 14px;
+  margin-bottom: 6px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.todo-list {
+  background: rgb(245, 243, 243);
+  border-radius: 4px;
+  padding: 5px;
+  min-width: 400px 
 }
 .contact-form {
   display: flex;
