@@ -4,17 +4,17 @@ import {Link} from 'react-router-dom';
 
 function Nav() {
   return (
-    <nav className="navbar">
-        <h3>Doable - React Todo App</h3>
-        <ul className="nav-links">
-            <Link to='/'>
-                <li>Todos</li>
-            </Link>
-            <Link to='/contact'>
-                <li>Contact</li>
-            </Link>
-        </ul>
-    </nav>
+      <nav className="navbar">
+          <h2>Doable - React Todo App</h2>
+          <ul className="nav-links">
+              {/* <Link to='/'> */}
+                  <li>Todos</li>
+              {/* </Link> */}
+              {/* <Link to='/contact'> */}
+                  <li>Contact</li>
+              {/* </Link> */}
+          </ul>
+      </nav>
   );
 }
 
