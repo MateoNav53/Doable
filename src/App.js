@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import './App.css';
 import Contact from './Contact'
 import Nav from './components/Nav'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, HashRouter, Switch, Route } from 'react-router-dom'
 import TodoForm from './components/TodoForm';
+import { v4 as uuidv4 } from 'uuid';
 
 
 const Todo = ({ todo }) => <div className="todo">{todo.text}</div>;
@@ -11,23 +12,23 @@ const Todo = ({ todo }) => <div className="todo">{todo.text}</div>;
 function App() {
   const [todoItem, setTodoItem] = useState([
     {
-      text: "Struggle with React"
+      text: "Add items to List"
     },
     {
-      text: "Flail around blindly on the computer"
+      text: "Mark Items Complete"
     },
     {
-      text: "Become master programmer"
+      text: "Delete Items"
     },
   ])
 
   const addTodo = text => {
     const newTodos = [...todoItem, {text}]
     setTodoItem(newTodos);
-  };
+  }; 
 
   return (
-    <Router>
+    <HashRouter>
       <div className="App">
         <div className="todo-list">
           <Nav />
@@ -45,7 +46,7 @@ function App() {
           ))}
         </div>
       </div>
-    </Router>
+    </HashRouter>
     
   );
 }

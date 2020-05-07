@@ -5,9 +5,9 @@ import {Link} from 'react-router-dom';
 function Nav() {
   return (
     <nav className="navbar">
-        <h3>Cross-Off - React Todo App</h3>
+        <h3>Doable - React Todo App</h3>
         <ul className="nav-links">
-            <Link to='/todos'>
+            <Link to='/'>
                 <li>Todos</li>
             </Link>
             <Link to='/contact'>

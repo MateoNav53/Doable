@@ -10,7 +10,6 @@ function TodoForm({ addTodo }) {
     setValue("");
   };
 
-
   return (
       <div>
         <h1>Manage Your Todos Here</h1>
