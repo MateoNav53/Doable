@@ -7,18 +7,28 @@ import TodoForm from './components/TodoForm';
 import { v4 as uuidv4 } from 'uuid';
 
 function App(){
-  const [newTodo, setNewTodo] = useState('')
-  const [todos, setTodos] = useState([])
+  const [newInput, setNewInput] = useState('')
+  const [todoItems, setTodoItems] = useState([])
 
+  //Stores the state of input field
   function handleInputChange(e){
     e.preventDefault();
-    setNewTodo(e.target.value)
+    setNewInput(e.target.value)
   }
 
-  function handleNewTodo(e){
+  //Stores the state of submitted input in a list
+  function handleTodoItems(e){
     e.preventDefault();
-    setNewTodo(e.target.value)
-    console.log(newTodo)
+    if (newInput === "") {
+      return (alert("Input field cannot be empty"))
+    }
+    setTodoItems([...todoItems, {id: uuidv4(), text: newInput}])
+    e.target.reset()
+    setNewInput("")
+  }
+  
+  function deleteTodo(id) {
+    setTodoItems(todoItems).filter((todoItem) => todoItem.id !== id)
   }
   
   return (
@@ -27,65 +37,27 @@ function App(){
       {/* <Switch>
          <Route path="/" exact component={App} />
          <Route path="/contact" component={Contact} />
-    </Switch> */}
+      </Switch> */}
         <Nav />
         <h1>Manage Your Todo List</h1>
-        <form onSubmit={handleNewTodo}>
+        <form className="todo-list" onSubmit={handleTodoItems}>
           <input className="todo-form" placeholder="Enter your todo here" onChange={handleInputChange} />
-          <button className="todo-form" type="submit">Add</button>
+          <button className="todo-form btn btn-success" type="submit">Add</button>
           <ul>
-            <li>Do Laundry</li>
-            <li>Go to the bank</li>
+            {todoItems.map((todoItem) => (
+              <li className="todo" key={todoItem.id}>{todoItem.text}
+              <button className="btn btn-danger" onClick={() => deleteTodo(todoItem.id)}>Delete</button>
+              </li>
+              
+            ))}
           </ul>
         </form>
+        <footer>
+          Copyright Mateo Navarrette 2020
+        </footer>
       </div>
-    // </HashRouter>
-    
   )
 }
 
-// const Todo = ({ todo }) => <div className="todo">{todo.text}</div>;
-
-// function App() {
-// const [todoItem, setTodoItem] = useState([
-//   {
-//     text: "Add items to List"
-//   },
-//   {
-//     text: "Mark Items Complete"
-//   },
-//   {
-//     text: "Delete Items"
-//   },
-// ])
-
-// const addTodo = text => {
-//   const newTodos = [...todoItem, {text}]
-//   setTodoItem(newTodos);
-// }; 
-
-// return (
-//   <HashRouter>
-//     <div className="App">
-//       <div className="todo-list">
-//         <Nav />
-//         <Switch>
-//           <Route path="/" exact component={TodoForm} />
-//           <Route path="/contact" component={Contact} />
-//         </Switch>
-//         <TodoForm addTodo={addTodo} />
-//         {todoItem.map((todo, index) => (
-//           <Todo
-//           key={index}
-//           index={index}
-//           todo={todo}
-//           />
-//         ))}
-//       </div>
-//     </div>
-//   </HashRouter>
-    
-// );
-
-
 export default App;
+
