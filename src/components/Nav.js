@@ -13,12 +13,12 @@ function Nav() {
               <div className="collapse navbar-collapse" id="link_targets">
                 <Link to='/'>
                     <li className="nav-item">
-                        <a className="nav-link"href="#">Todos</a>
+                        Todos
                     </li>
                 </Link>
                 <Link to='/contact'>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">Contact</a>
+                        Contact
                     </li>
                 </Link>
               </div>
