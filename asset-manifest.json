@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/mateonav53.github.io/doable/static/css/main.f7aa070b.chunk.css",
+    "main.js": "/mateonav53.github.io/doable/static/js/main.5b285e46.chunk.js",
+    "main.js.map": "/mateonav53.github.io/doable/static/js/main.5b285e46.chunk.js.map",
+    "runtime-main.js": "/mateonav53.github.io/doable/static/js/runtime-main.e6bf6034.js",
+    "runtime-main.js.map": "/mateonav53.github.io/doable/static/js/runtime-main.e6bf6034.js.map",
+    "static/js/2.12ab526c.chunk.js": "/mateonav53.github.io/doable/static/js/2.12ab526c.chunk.js",
+    "static/js/2.12ab526c.chunk.js.map": "/mateonav53.github.io/doable/static/js/2.12ab526c.chunk.js.map",
+    "index.html": "/mateonav53.github.io/doable/index.html",
+    "precache-manifest.30cd4016af967365f4620cf9fa304b60.js": "/mateonav53.github.io/doable/precache-manifest.30cd4016af967365f4620cf9fa304b60.js",
+    "service-worker.js": "/mateonav53.github.io/doable/service-worker.js",
+    "static/css/main.f7aa070b.chunk.css.map": "/mateonav53.github.io/doable/static/css/main.f7aa070b.chunk.css.map",
+    "static/js/2.12ab526c.chunk.js.LICENSE.txt": "/mateonav53.github.io/doable/static/js/2.12ab526c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e6bf6034.js",
+    "static/js/2.12ab526c.chunk.js",
+    "static/css/main.f7aa070b.chunk.css",
+    "static/js/main.5b285e46.chunk.js"
+  ]
+}
