@@ -88,3 +88,9 @@ footer {
 .remove-default-padding{
   padding-inline-start: 0;
 }
+.btn.btn {
+  cursor: default;
+}
+.doable-header {
+  cursor: default;
+}
