@@ -2,6 +2,7 @@
   "name": "cross-off",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mateonav53.github.io/doable/#/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -20,7 +21,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "mateonav53.github.io/doable",
   "eslintConfig": {
     "extends": "react-app"
   },
