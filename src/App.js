@@ -3,7 +3,7 @@ import './App.css';
 import Contact from './components/Contact';
 import Nav from './components/Nav';
 import TodoList from './components/TodoList';
-import { BrowserRouter as HashRouter, Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 
 function App(){
   
